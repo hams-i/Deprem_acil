@@ -224,3 +224,6 @@ dist
 # Build
 release-builds
 dist
+
+#desktop icon
+desktop.ini

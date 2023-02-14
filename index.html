@@ -5,26 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Hamsi"/>
-    <meta name="keywords" content="Deprem, Deprem için ne yapabilirim?, Deprem Yardımlar, Kaç Saat Geçti, tweet listesi,depremden sonra kaç saat geçti canlı, canlı deprem saati" />
     <META name="rating" content="general">
     <meta name="Copyright" content="© ALL RIGHTS RESERVED">
-    <meta name="description" content="İlk Deprem AFAD'ın verilerine göre 6 Şubat sabahı saat 04:17'de gerçekleşti."/>
+    <meta name="description" content="Başımız Sağ Olsun. Deprem için az çok demeden elinden geleni yapanlar, isimleriniz bilinmese de bu halkın Gizli Kahramanlarısınız ❤."/>
     <meta name="robots" content="index,follow" />
-    <meta name="theme-color" content="#141414">
-	<meta name="msapplication-navbutton-color" content="black">
+    <meta name="theme-color" content="#B30909">
+	<meta name="msapplication-navbutton-color" content="#B30909">
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>Kaç Saat Geçti?</title>
+	<meta name="apple-mobile-web-app-status-bar-style" content="#B30909">
+    <title>Başımız Sağ Olsun</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="time-info">
-        <h4>İlk Deprem 6 Şubat, 04:17'den Sonra Geçen Zaman.</h4>
-    </div> 
-    <div class="time-screen">
-        <p class="have-passed-time"></p>
-        <p class="have-passed"></p><br>
-        <p class="time-hope">UMUDUNU KESME <span>❤</span></p>
+    <div class="main-screen">
+        <h2>Başımız Sağ Olsun. Deprem için az çok demeden elinden geleni yapanlar, isimleriniz bilinmese de bu halkın <span>Gizli Kahramanlarısınız ❤</span>.</h2>
     </div>
     <div class="contactme" id="contactme">
         <h4>Bu Websitesi Açık Kaynak Olarak Yayınlanmaktadır: <a href="https://github.com/hams-i/Deprem_acil" target="_blank">Github</a></h4>
@@ -33,28 +27,5 @@
             <h6>Copyright © 2023</h6>
         </div>
     </div>
-    <script>
-        const have_passed_time = document.querySelector(".have-passed-time");
-        const have_passed = document.querySelector(".have-passed");
-        function timeSince(date) {
-            var now = new Date();
-            var elapsedTime = now.getTime() - date.getTime();
-            
-            var seconds = Math.floor(elapsedTime / 1000);
-            var minutes = Math.floor(seconds / 60);
-            var hours = Math.floor(minutes / 60);
-            seconds = seconds % 60;
-            minutes = minutes % 60;
-            have_passed_time.innerHTML = hours + "<sub>S</sub> : " + ('0' + minutes).slice(-2) + "<sub>d</sub> : " + ('0' + seconds).slice(-2) +"<sub>s</sub>";
-            var days = Math.floor(hours / 24);
-            hours = hours % 24;
-            have_passed.innerHTML = days + " <sub>Gün</sub> " +hours + " <sub>Saat</sub>";
-        }
-        var date = new Date("2023-02-06T04:17:00");
-        var time = timeSince(date);
-        setInterval(function() {
-            var time = timeSince(date);
-        }, 1000);
-    </script>
 </body>
 </html>
